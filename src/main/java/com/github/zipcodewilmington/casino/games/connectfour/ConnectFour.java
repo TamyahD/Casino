@@ -16,8 +16,12 @@ public class ConnectFour implements GameInterface {
 //    List<Token> cpuTokens = new ArrayList<>();
 //    static Map<Character[][], Boolean> indexTracker = new HashMap<>();
 
-    public void playConnectFour() {
+    public static void main(String[] args) {
+        ConnectFour cf = new ConnectFour();
+        cf.run();
+    }
 
+    public void playConnectFour() {
         final String ANSI_YELLOW = "\u001B[33m"; //replace with AnsiColor enums
         final String ANSI_RED = "\u001B[31m";
         AnsiColor color;
@@ -35,19 +39,6 @@ public class ConnectFour implements GameInterface {
         boolean winner = false;
         boolean allowedPlacement;
 
-        //public static void main(String[] args) {
-//        Character[][] board = {
-//                {'-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-'},
-//                {'|', 'O', '|', 'O', '|', 'O', '|', 'O', '|', 'O', '|', 'O', '|', 'O', '|'},
-//                {'|', 'O', '|', 'O', '|', 'O', '|', 'O', '|', 'O', '|', 'O', '|', 'O', '|'},
-//                {'|', 'O', '|', 'O', '|', 'O', '|', 'O', '|', 'O', '|', 'O', '|', 'O', '|'},
-//                {'|', 'O', '|', 'O', '|', 'O', '|', 'O', '|', 'O', '|', 'O', '|', 'O', '|'},
-//                {'|', 'O', '|', 'O', '|', 'O', '|', 'O', '|', 'O', '|', 'O', '|', 'O', '|'},
-//                {'|', 'O', '|', 'O', '|', 'O', '|', 'O', '|', 'O', '|', 'O', '|', 'O', '|'},
-//                {'|', '-', '|', '-', '|', '-', '|', '-', '|', '-', '|', '-', '|', '-', '|'},
-//        };
-//        placeUserPosition(board, "user");
-//        System.out.print(userToken);
 
         gameBoard = new Board(board);
         createGameBoard();
